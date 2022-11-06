@@ -1,0 +1,28 @@
+#include <iostream>
+#define G 9.80665
+
+
+class takenRoad {
+ private:
+	double time;
+ public:
+	 void theTakenRoad(double t) {
+		 time = t;
+	 }
+	 double perimeter();
+};
+
+double takenRoad::perimeter() {
+	return 1. / 2 * G * time * time;
+}
+
+
+int main()
+{
+
+	takenRoad takenRoad1;
+	takenRoad1.theTakenRoad(10);
+	std::cout << "Road taken is:" << takenRoad1.perimeter();
+	
+
+}
